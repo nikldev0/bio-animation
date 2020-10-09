@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'David Libre', serif;
+  background-color: rgb(245, 191, 191);
+}
+
+/* Title */
+
+h1 {
+  margin-bottom: 5rem;
+}
+
+/* Grid Structure */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+.grid-item {
+  background: rgb(52, 219, 163);
+  box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+/* Bio */
+
+p {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  bottom: 5rem;
+  font-size: 0rem;
+}
+
+/* Bio Animation */
+
+.revealBio {
+  animation: revealBio 1s ease 1 forwards normal;
+}
+
+.closeBio {
+  animation: closeBio 1s ease 1 forwards normal;
+}
+
+@keyframes revealBio {
+  from {
+  }
+
+  to {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes closeBio {
+  0% {
+    font-size: 0.9rem;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    font-size: 0rem;
+  }
+}
+
+/* Profile Image */
+
+img {
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+}
+
+/* Profile Image Animation */
+
+.moveImageUp {
+  animation: openCard 0.8s ease-in-out 1 forwards normal;
+}
+
+.moveImageDown {
+  animation: closeCard 0.8s ease-in-out 1 forwards normal;
+}
+
+@keyframes openCard {
+  from {
+    margin-bottom: 1rem;
+  }
+
+  to {
+    margin-bottom: 7rem;
+  }
+}
+
+@keyframes closeCard {
+  from {
+    margin-bottom: 7rem;
+  }
+
+  to {
+    margin-bottom: 1rem;
+  }
+}
+
+/* // open-source experience 
+
+// bullet point sections- what i learned aysnchrous javacript/arrow functions/local storage - what you've learned and what I've delievered
+
+// opensource- hacktoberfest  - developed x, using y tooling
+
+// bullet-point is a thing i specifically delivered - outcome focused - impact made - updated links to work -- sounds good 
+
+// top-level about place and role - to deliver - for your
+
+// Explore CV structures for Software roles -- send redraft of CV - update CV
+
+// interview-prep material - cracking the coding interview
+
+// CodeKatas -- how to solve a problem start having a scan 
+
+// redflags interviews
+// over prepare
+// Mock interviews  */
