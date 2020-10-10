@@ -27,8 +27,7 @@ h1 {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .grid-item {
@@ -48,7 +47,8 @@ h1 {
 /* Bio */
 
 p {
-  text-align: center;
+  text-align: justify;
+  word-break: break-all;
   z-index: 10;
   position: relative;
   bottom: 5rem;
